@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Wallpaper</string>
+    <string name="camera_wallpaper">相机壁纸</string>
+    <string name="description">这是相机壁纸</string>
+</resources>
