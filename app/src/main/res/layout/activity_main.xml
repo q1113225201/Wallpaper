@@ -7,6 +7,16 @@
     tools:context="com.sjl.wallpaper.MainActivity">
 
     <Button
+        android:id="@+id/btnChooseWallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择壁纸" />
+    <Button
+        android:id="@+id/btnChooseLiveWallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择动态壁纸" />
+    <Button
         android:id="@+id/btnVideoWallpaper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

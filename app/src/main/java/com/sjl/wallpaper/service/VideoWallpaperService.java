@@ -5,7 +5,12 @@ import android.service.wallpaper.WallpaperService;
 import android.view.SurfaceHolder;
 
 import com.sjl.wallpaper.R;
-
+/**
+ * 视频壁纸
+ *
+ * @author SJL
+ * @date 2017/8/24
+ */
 public class VideoWallpaperService extends WallpaperService {
 
     @Override

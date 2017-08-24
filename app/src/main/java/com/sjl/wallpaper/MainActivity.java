@@ -27,6 +27,20 @@ public class MainActivity extends Activity {
 
     private void initView() {
         context = this;
+        findViewById(R.id.btnChooseWallpaper).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SET_WALLPAPER);
+                startActivity(Intent.createChooser(intent, "选择壁纸"));
+            }
+        });
+        findViewById(R.id.btnChooseLiveWallpaper).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WallpaperManager.ACTION_LIVE_WALLPAPER_CHOOSER);
+                startActivity(intent);
+            }
+        });
         //选择视频壁纸
         findViewById(R.id.btnVideoWallpaper).setOnClickListener(new View.OnClickListener() {
             @Override
