@@ -29,7 +29,6 @@ public class CameraWallpaperService extends WallpaperService {
         @Override
         public void onCreate(SurfaceHolder surfaceHolder) {
             super.onCreate(surfaceHolder);
-            startPreview();
             //接受触摸事件
             setTouchEventsEnabled(true);
         }
@@ -41,9 +40,19 @@ public class CameraWallpaperService extends WallpaperService {
         }
 
         @Override
+        public void onVisibilityChanged(boolean visible) {
+            super.onVisibilityChanged(visible);
+            if(visible){
+                startPreview();
+            }else{
+                stopPreview();
+            }
+        }
+
+        @Override
         public void onDestroy() {
-            super.onDestroy();
             stopPreview();
+            super.onDestroy();
         }
 
         /**
@@ -65,7 +74,7 @@ public class CameraWallpaperService extends WallpaperService {
          * 关闭预览
          */
         private void stopPreview() {
-            if (camera == null) {
+            if (camera != null) {
                 camera.stopPreview();
                 camera.release();
                 camera = null;
