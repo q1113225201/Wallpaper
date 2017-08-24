@@ -36,7 +36,7 @@ public class CameraWallpaperService extends WallpaperService {
         @Override
         public void onTouchEvent(MotionEvent event) {
             super.onTouchEvent(event);
-            //可以在这里处理添加触摸事件，点击拍照之类的
+            //可以在这里处理添加触摸事件，如点击拍照
         }
 
         @Override
